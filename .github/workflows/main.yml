@@ -9,7 +9,7 @@ env:
   PROJECT_ID: extreme-axon-381209
   IMAGE_NAME: my-dotnetwebapi
   REPOSITORY: europe-southwest1-docker.pkg.dev/extreme-axon-381209/myfirstrepo
-  TAG: ${{ github.run_id }}-${{ github.run_number }}
+  TAG: latest
 
 jobs:
   build-and-push:
