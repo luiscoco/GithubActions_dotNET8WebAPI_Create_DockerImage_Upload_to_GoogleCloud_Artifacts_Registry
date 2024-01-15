@@ -1,4 +1,4 @@
-# GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry
+# GithubActions: How to create .NET8 WebAPI Docker image and upload to Google Cloud Artifacts Registry
 
 You can see this example source code in this github repo: 
 
