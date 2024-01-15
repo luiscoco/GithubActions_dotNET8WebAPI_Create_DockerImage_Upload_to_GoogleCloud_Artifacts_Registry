@@ -38,6 +38,10 @@ jobs:
         push: true
         tags: ${{ env.REPOSITORY }}/${{ env.IMAGE_NAME }}:latest
 
+    - name: Debugging image tags
+      run: |
+        docker images | grep ${{ env.IMAGE_NAME }}
+
     - name: Verify the image was pushed
       run: |
         gcloud artifacts docker images list ${{ env.REPOSITORY }}/${{ env.IMAGE_NAME }}
