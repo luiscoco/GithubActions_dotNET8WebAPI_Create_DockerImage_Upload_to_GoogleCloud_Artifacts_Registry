@@ -212,7 +212,16 @@ We also set the Service account admins role, we select our Projec ID role
 
 ![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/84494f61-d9f0-4331-b150-c31b73c1124a)
 
-Then We create a new Key to copy it in our Github Secrets and store it with the variable name 
+Then We create a new Key to copy it in our Github Secrets and store it with the variable name **GOOGLE_CLOUD_CREDENTIALS**
+
+We click on the Key tab and we create a new JSON key file
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/308f1491-442e-46a5-9a04-0803610af8f8)
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/add6e01a-56e0-48f1-94e9-0713e531ceb6)
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/76c865bc-ec55-4399-997c-77e6b6bc7b75)
+
 
 
 
