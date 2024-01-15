@@ -4,6 +4,20 @@ You can see this example source code in this github repo:
 
 https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry
 
+## 0. Prerequisite
+
+We have to create a new repo in Google Cloud Artifacts Registry
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/2d555fbe-1653-41c8-a254-b1f2d520c733)
+
+We set the input data
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/8842fdf1-c579-4b98-933c-34820402a492)
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/6d7b12b6-1548-4207-bfd9-1b7bacd45fa4)
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/fcf8e8fa-15b3-441c-b111-f9a47e465524)
+
 ## 1. Create a Service Account in Google Cloud Platform
 
 Go to the GCP Console: Open the Google Cloud Console and log in to your account.
