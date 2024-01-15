@@ -36,6 +36,15 @@ Be cautious with permissions to follow the principle of least privilege.
 
 Choose "JSON" as the key type and click "Create". This will download the JSON key file to your computer.
 
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/74960ef0-d30d-4ebf-8c46-2c75b3062432)
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/8168d90e-0d5d-4713-ab40-42012754ea4d)
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/1b6134ee-1324-4248-ac62-da276d3d83a6)
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/07a751b2-1dcb-4f23-bd11-63e7a56bb3be)
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/fcb327f6-255c-4411-a87b-487f01dd2dd4)
 
 
 **Step 2**: Add the Key as a Secret in Your GitHub Repository
