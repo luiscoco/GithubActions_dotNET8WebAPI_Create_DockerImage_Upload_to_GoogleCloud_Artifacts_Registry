@@ -4,21 +4,21 @@
 
 Go to the GCP Console: Open the Google Cloud Console and log in to your account.
 
-Select Your Project: Make sure you have the correct project selected in which you want to create the service account.
+**Select Your Project**: Make sure you have the correct project selected in which you want to create the service account.
 
-Navigate to IAM & Admin: In the left-hand menu, click on "IAM & Admin", then select "Service Accounts".
+**Navigate to IAM & Admin**: In the left-hand menu, click on "IAM & Admin", then select "Service Accounts".
 
-Create Service Account: Click on "Create Service Account" and fill in the necessary details:
+**Create Service Account**: Click on "Create Service Account" and fill in the necessary details:
 
-Name: Give your service account a name.
+**Name**: Give your service account a name.
 
-ID: This is filled automatically based on the name but can be customized.
+**ID**: This is filled automatically based on the name but can be customized.
 
-Description: (Optional) Add a description for your service account.
+**Description**: (Optional) Add a description for your service account.
 
 ![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/14e70f22-b55c-40f9-be13-88bae9b3f96f)
 
-Grant Access: Assign the service account appropriate roles. For Docker images, roles like "Storage Admin" or "Artifact Registry Administrator" might be relevant. 
+**Grant Access**: Assign the service account appropriate roles. For Docker images, roles like "Storage Admin" or "Artifact Registry Administrator" might be relevant. 
 
 Be cautious with permissions to follow the principle of least privilege.
 
@@ -26,7 +26,9 @@ Be cautious with permissions to follow the principle of least privilege.
 
 ![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/26d5cf51-7ff7-4b6e-a023-a719a8b12cd2)
 
-Create Key: After creating the service account, click on it to open its details. Under the "Keys" tab, click "Add Key", then select "Create new key". 
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/35ff5cf0-bc5d-41ea-a3f5-985174a07ff1)
+
+**Create Key**: After creating the service account, click on it to open its details. Under the "Keys" tab, click "Add Key", then select "Create new key". 
 
 Choose "JSON" as the key type and click "Create". This will download the JSON key file to your computer.
 
