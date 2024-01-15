@@ -18,15 +18,14 @@ Go to the GCP Console: Open the Google Cloud Console and log in to your account.
 
 ![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/14e70f22-b55c-40f9-be13-88bae9b3f96f)
 
-**Grant Access**: Assign the service account appropriate roles. For Docker images, roles like "**Artifact Registry Writer**", "**Storage Admin**" or "**Artifact Registry Administrator**" might be relevant. 
+**Grant Access**: Assign the service account appropriate roles. For Docker images push we can assing the role: "**Artifact Registry Writer**"
+
+Other similar roles could be: "**Storage Admin**" or "**Artifact Registry Administrator**"  
 
 Be cautious with permissions to follow the principle of least privilege.
 
-![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/bace8465-8ce9-4f1e-9187-fa4beee45943)
 
-![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/26d5cf51-7ff7-4b6e-a023-a719a8b12cd2)
 
-![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/35ff5cf0-bc5d-41ea-a3f5-985174a07ff1)
 
 **Create Key**: After creating the service account, click on it to open its details. Under the "Keys" tab, click "Add Key", then select "Create new key". 
 
