@@ -30,6 +30,8 @@ Other similar roles could be: "**Storage Admin**" or "**Artifact Registry Admini
 
 ![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/ebf54060-cb30-43f1-919b-5e779f8e1090)
 
+Do not forget to set the project ID in the role
+
 ![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/91e74724-9bc8-4561-ad52-2ac19aa3cffa)
 
 ![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/eb3931cf-6b5c-4f6e-a6bf-c5c91f6ed30b)
