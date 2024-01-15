@@ -196,3 +196,68 @@ We can verify the running Docker container
 
 ![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/15ebd833-959c-4c97-af6e-c168db0755d9)
 
+## 5. Modify the main.yml for creating a new repo if it doesn't exist
+
+Below is the complete main.yml file based on your initial workflow, with the added functionality to check for the existence of a Google Cloud Artifact Registry repository and create it if it does not exist. 
+
+This workflow includes steps for authentication, checking and creating the repository, building and pushing the Docker image, and verifying the push.
+
+```yml
+name: Build and Push Docker Image
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  PROJECT_ID: extreme-axon-381209
+  IMAGE_NAME: my-dotnetwebapi
+  REPOSITORY: myfirstrepo
+  TAG: latest
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Authenticate to Google Cloud
+      uses: google-github-actions/auth@v2
+      with:
+        credentials_json: ${{ secrets.GOOGLE_CLOUD_CREDENTIALS }}
+
+    - name: Configure Docker for Google Cloud Artifact Registry
+      run: |
+        echo '${{ secrets.GOOGLE_CLOUD_CREDENTIALS }}' | gcloud auth activate-service-account --key-file=-
+        gcloud auth configure-docker europe-southwest1-docker.pkg.dev --quiet
+
+    - name: Check if Google Cloud Artifact Registry repository exists
+      id: check-repo
+      run: |
+        if gcloud artifacts repositories describe ${{ env.REPOSITORY }} --location=europe-southwest1 --project=${{ env.PROJECT_ID }}; then
+          echo "Repository exists"
+        else
+          echo "::set-output name=repo_exists::false"
+        fi
+
+    - name: Create Google Cloud Artifact Registry repository if it does not exist
+      if: steps.check-repo.outputs.repo_exists == 'false'
+      run: |
+        gcloud artifacts repositories create ${{ env.REPOSITORY }} --repository-format=docker --location=europe-southwest1 --project=${{ env.PROJECT_ID }}
+        echo "Repository created"
+
+    - name: Build Docker image
+      run: |
+        docker build -t europe-southwest1-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }} .
+
+    - name: Push Docker image
+      run: |
+        docker push europe-southwest1-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
+
+    - name: Verify the image was pushed
+      run: |
+        gcloud artifacts docker images list europe-southwest1-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.IMAGE_NAME }}
+```
