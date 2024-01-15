@@ -18,7 +18,7 @@ Go to the GCP Console: Open the Google Cloud Console and log in to your account.
 
 ![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/14e70f22-b55c-40f9-be13-88bae9b3f96f)
 
-**Grant Access**: Assign the service account appropriate roles. For Docker images, roles like "Storage Admin" or "Artifact Registry Administrator" might be relevant. 
+**Grant Access**: Assign the service account appropriate roles. For Docker images, roles like "**Artifact Registry Writer**", "**Storage Admin**" or "**Artifact Registry Administrator**" might be relevant. 
 
 Be cautious with permissions to follow the principle of least privilege.
 
@@ -81,12 +81,12 @@ name: Build and Push Docker Image
 on:
   push:
     branches:
-      - main  # or the branch of your choice
+      - main
 
 env:
-  PROJECT_ID: your-google-cloud-project-id
-  IMAGE_NAME: your-image-name
-  REPOSITORY: your-region-docker.pkg.dev/your-project-id/your-repo
+  PROJECT_ID: extreme-axon-381209
+  IMAGE_NAME: my-dotnetwebapi
+  REPOSITORY: europe-southwest1-docker.pkg.dev/extreme-axon-381209/myfirstrepo
 
 jobs:
   build-and-push:
@@ -94,20 +94,19 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
 
     - name: Login to Google Cloud Artifact Registry
-      uses: google-github-actions/auth@v0
+      uses: google-github-actions/auth@v2
       with:
         credentials_json: ${{ secrets.GOOGLE_CLOUD_CREDENTIALS }}
 
-    - name: Configure Docker for Google Cloud Artifact Registry
+    - name: Docker login to Google Cloud Artifact Registry
       run: |
-        gcloud auth configure-docker ${{ env.REPOSITORY }},gcr.io
-
+        echo '${{ secrets.GOOGLE_CLOUD_CREDENTIALS }}' | docker login europe-southwest1-docker.pkg.dev -u _json_key --password-stdin
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
       with:
