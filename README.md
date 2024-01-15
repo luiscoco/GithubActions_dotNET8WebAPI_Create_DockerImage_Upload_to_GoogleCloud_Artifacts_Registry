@@ -206,7 +206,7 @@ We also set the permission **Artifact Registry Writer** to push Docker image to 
 
 ![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/83aacfc9-7078-458c-ac82-f4cff7cdaddb)
 
-We also set the Service account admins role
+We also set the Service account admins role, we select our Projec ID role
 
 ![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/cfc79595-4ced-4d9a-8f3c-0c3d9c304eae)
 
