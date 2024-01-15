@@ -3,7 +3,7 @@ name: Build and Push Docker Image
 on:
   push:
     branches:
-      - master
+      - main
 
 env:
   PROJECT_ID: extreme-axon-381209
