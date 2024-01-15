@@ -206,6 +206,14 @@ We also set the permission **** to push Docker image to the Artificat Registry r
 
 ![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/83aacfc9-7078-458c-ac82-f4cff7cdaddb)
 
+We also set the Service account admins role
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/cfc79595-4ced-4d9a-8f3c-0c3d9c304eae)
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/84494f61-d9f0-4331-b150-c31b73c1124a)
+
+Then We create a new Key to copy it in our Github Secrets and store it with the variable name 
+
 
 
 Below is the complete main.yml file based on your initial workflow, with the added functionality to check for the existence of a Google Cloud Artifact Registry repository and create it if it does not exist. 
