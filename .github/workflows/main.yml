@@ -9,6 +9,7 @@ env:
   PROJECT_ID: extreme-axon-381209
   IMAGE_NAME: my-dotnetwebapi
   REPOSITORY: europe-southwest1-docker.pkg.dev/extreme-axon-381209/myfirstrepo
+  TAG: ${{ github.run_id }}-${{ github.run_number }}
 
 jobs:
   build-and-push:
@@ -36,12 +37,8 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ env.REPOSITORY }}/${{ env.IMAGE_NAME }}:latest
+        tags: ${{ env.REPOSITORY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
 
-    - name: List all Docker images
-      run: |
-        docker images
-        
     - name: Verify the image was pushed
       run: |
         gcloud artifacts docker images list ${{ env.REPOSITORY }}/${{ env.IMAGE_NAME }}
