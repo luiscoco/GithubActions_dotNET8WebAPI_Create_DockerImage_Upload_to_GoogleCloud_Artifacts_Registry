@@ -222,6 +222,9 @@ We click on the Key tab and we create a new JSON key file
 
 ![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/76c865bc-ec55-4399-997c-77e6b6bc7b75)
 
+In our github repo we nagivate to the **Settings->Secrets option->Actions**
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/41eeb34d-2964-4fff-ac6b-2d24269bc174)
 
 
 
