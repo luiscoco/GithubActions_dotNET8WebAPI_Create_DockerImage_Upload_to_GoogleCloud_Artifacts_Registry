@@ -3,7 +3,7 @@ name: Build and Push Docker Image
 on:
   push:
     branches:
-      - main  # or the branch of your choice
+      - main
 
 env:
   PROJECT_ID: extreme-axon-381209
@@ -29,6 +29,12 @@ jobs:
     - name: Configure Docker for Google Cloud Artifact Registry
       run: |
         gcloud auth configure-docker ${{ env.REPOSITORY }},gcr.io
+
+    # New step to check access to the Artifact Registry
+    - name: Check access to Google Cloud Artifact Registry
+      run: |
+        gcloud artifacts repositories list --project=${{ env.PROJECT_ID }}
+        gcloud artifacts docker images list ${{ env.REPOSITORY }}
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
