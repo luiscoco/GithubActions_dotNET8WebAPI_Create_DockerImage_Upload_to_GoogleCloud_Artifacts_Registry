@@ -16,6 +16,8 @@ ID: This is filled automatically based on the name but can be customized.
 
 Description: (Optional) Add a description for your service account.
 
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/14e70f22-b55c-40f9-be13-88bae9b3f96f)
+
 Grant Access: Assign the service account appropriate roles. For Docker images, roles like "Storage Admin" or "Artifact Registry Administrator" might be relevant. 
 
 Be cautious with permissions to follow the principle of least privilege.
