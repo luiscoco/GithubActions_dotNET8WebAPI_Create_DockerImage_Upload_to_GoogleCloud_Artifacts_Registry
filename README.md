@@ -1,8 +1,10 @@
 # GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry
 
-**Step 1**: Create a Service Account in Google Cloud Platform
+**Step 1**: Create a **Service Account** in Google Cloud Platform
 
 Go to the GCP Console: Open the Google Cloud Console and log in to your account.
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/cb9c3717-0cf6-4a47-b5fe-3ae8b8998188)
 
 **Select Your Project**: Make sure you have the correct project selected in which you want to create the service account.
 
@@ -16,32 +18,25 @@ Go to the GCP Console: Open the Google Cloud Console and log in to your account.
 
 **Description**: (Optional) Add a description for your service account.
 
-![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/14e70f22-b55c-40f9-be13-88bae9b3f96f)
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/ac6d6f71-26db-4f53-97f4-ef4954c06fe7)
 
 **Grant Access**: Assign the service account appropriate roles. For Docker images push we can assing the role: "**Artifact Registry Writer**"
 
 Other similar roles could be: "**Storage Admin**" or "**Artifact Registry Administrator**"  
 
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/ebf54060-cb30-43f1-919b-5e779f8e1090)
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/91e74724-9bc8-4561-ad52-2ac19aa3cffa)
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/eb3931cf-6b5c-4f6e-a6bf-c5c91f6ed30b)
+
 Be cautious with permissions to follow the principle of least privilege.
-
-
-
 
 **Create Key**: After creating the service account, click on it to open its details. Under the "Keys" tab, click "Add Key", then select "Create new key". 
 
 Choose "JSON" as the key type and click "Create". This will download the JSON key file to your computer.
 
-![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/8ff68b88-3a83-4940-a547-53192583a595)
 
-![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/271af66e-416c-459a-a9e1-a1b88434afb8)
-
-![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/05d10ab8-7694-4cb4-af32-9688dce1d6bc)
-
-![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/2e13030c-736c-42c3-b532-049298273bc0)
-
-![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/ec5f9e2d-6ef2-4ec4-ba7c-d00eee5e59dc)
-
-![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/d0e8fe8c-d571-49dc-a511-1d65dcafec68)
 
 **Step 2**: Add the Key as a Secret in Your GitHub Repository
 
