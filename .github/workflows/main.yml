@@ -1,0 +1,43 @@
+name: Build and Push Docker Image
+
+on:
+  push:
+    branches:
+      - main  # or the branch of your choice
+
+env:
+  PROJECT_ID: extreme-axon-381209
+  IMAGE_NAME: my-dotnetwebapi
+  REPOSITORY: europe-southwest1-docker.pkg.dev/extreme-axon-381209/myfirstrepo
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v1
+
+    - name: Login to Google Cloud Artifact Registry
+      uses: google-github-actions/auth@v0
+      with:
+        credentials_json: ${{ secrets.GOOGLE_CLOUD_CREDENTIALS }}
+
+    - name: Configure Docker for Google Cloud Artifact Registry
+      run: |
+        gcloud auth configure-docker ${{ env.REPOSITORY }},gcr.io
+
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        file: ./Dockerfile
+        push: true
+        tags: ${{ env.REPOSITORY }}/${{ env.IMAGE_NAME }}:latest
+
+    - name: Verify the image was pushed
+      run: |
+        gcloud artifacts docker images list ${{ env.REPOSITORY }}/${{ env.IMAGE_NAME }}
