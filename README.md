@@ -136,4 +136,43 @@ We can see inside the repo the uploaded Docker image
 
 ![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/d3a98822-3e04-4c05-bdaf-056a0e346f0f)
 
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/b1c728b3-6f08-4e01-9424-b7e8415419cd)
+
+We run this command to pull the image and to 
+
+```
+docker pull europe-southwest1-docker.pkg.dev/extreme-axon-381209/myfirstrepo/my-dotnetwebapi:latest
+```
+
+We verified the downloaded image in Docker Desktop
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/2cc47e49-a5a2-44d1-836e-c4c4e64871ba)
+
+Also we can see the image with the command
+
+```
+docker images
+```
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/7d742d84-cffc-4cab-9cfb-fbcbff66882b)
+
+We run the image in our Docker Desktop
+
+```
+docker run -p 8080:8080 europe-southwest1-docker.pkg.dev/extreme-axon-381209/myfirstrepo/my-dotnetwebapi:latest
+```
+
+We see the running image with the command
+
+```
+docker ps
+```
+
+And also we can see the image in Docker Desktop
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/3e7553e2-355d-403e-b4c4-95ff5f6b18bc)
+
+We can verify the running Docker container 
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/15ebd833-959c-4c97-af6e-c168db0755d9)
 
