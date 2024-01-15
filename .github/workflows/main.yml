@@ -8,7 +8,7 @@ on:
 env:
   PROJECT_ID: extreme-axon-381209
   IMAGE_NAME: my-dotnetwebapi
-  REPOSITORY: europe-southwest1-docker.pkg.dev/extreme-axon-381209/myfirstrepo
+  REPOSITORY: myfirstrepo
   TAG: latest
 
 jobs:
@@ -29,15 +29,29 @@ jobs:
         echo '${{ secrets.GOOGLE_CLOUD_CREDENTIALS }}' | gcloud auth activate-service-account --key-file=-
         gcloud auth configure-docker europe-southwest1-docker.pkg.dev --quiet
 
+    - name: Check if Google Cloud Artifact Registry repository exists
+      id: check-repo
+      run: |
+        if gcloud artifacts repositories describe ${{ env.REPOSITORY }} --location=europe-southwest1 --project=${{ env.PROJECT_ID }}; then
+          echo "Repository exists"
+        else
+          echo "::set-output name=repo_exists::false"
+        fi
+
+    - name: Create Google Cloud Artifact Registry repository if it does not exist
+      if: steps.check-repo.outputs.repo_exists == 'false'
+      run: |
+        gcloud artifacts repositories create ${{ env.REPOSITORY }} --repository-format=docker --location=europe-southwest1 --project=${{ env.PROJECT_ID }}
+        echo "Repository created"
+
     - name: Build Docker image
       run: |
-        docker build -t ${{ env.REPOSITORY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }} .
+        docker build -t europe-southwest1-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }} .
 
     - name: Push Docker image
       run: |
-        docker push ${{ env.REPOSITORY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
+        docker push europe-southwest1-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
 
     - name: Verify the image was pushed
       run: |
-        gcloud artifacts docker images list ${{ env.REPOSITORY }}/${{ env.IMAGE_NAME }}
-
+        gcloud artifacts docker images list europe-southwest1-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.IMAGE_NAME }}
