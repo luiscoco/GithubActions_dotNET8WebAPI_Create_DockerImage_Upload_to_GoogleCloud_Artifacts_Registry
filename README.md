@@ -42,6 +42,8 @@ Choose "JSON" as the key type and click "Create". This will download the JSON ke
 
 ![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/ec5f9e2d-6ef2-4ec4-ba7c-d00eee5e59dc)
 
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/d0e8fe8c-d571-49dc-a511-1d65dcafec68)
+
 **Step 2**: Add the Key as a Secret in Your GitHub Repository
 
 Go to Your GitHub Repository: Open your GitHub repository in a web browser.
