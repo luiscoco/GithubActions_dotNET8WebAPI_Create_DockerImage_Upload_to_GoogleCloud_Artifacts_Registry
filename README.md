@@ -42,8 +42,6 @@ Choose "JSON" as the key type and click "Create". This will download the JSON ke
 
 ![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/ec5f9e2d-6ef2-4ec4-ba7c-d00eee5e59dc)
 
-![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/1e24e921-2952-46ab-8d67-0d05a02fd221)
-
 **Step 2**: Add the Key as a Secret in Your GitHub Repository
 
 Go to Your GitHub Repository: Open your GitHub repository in a web browser.
@@ -66,7 +64,7 @@ Save the Secret: Click "Add secret" to save your new secret.
 
 ![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/e466a636-3ec1-4ef9-b5e7-50bd30e67f83)
 
-
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/1e24e921-2952-46ab-8d67-0d05a02fd221)
 
 Now, your GitHub Actions workflow can use this **secret** to authenticate with Google Cloud services. In your workflow file, you can reference this secret as ${{ secrets.GOOGLE_CLOUD_CREDENTIALS }}.
 
