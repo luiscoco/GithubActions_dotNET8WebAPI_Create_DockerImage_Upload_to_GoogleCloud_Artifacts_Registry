@@ -198,6 +198,16 @@ We can verify the running Docker container
 
 ## 5. Modify the main.yml for creating a new repo if it doesn't exist
 
+As prerequisite for creating a new Artifact Registry repo it is mandatory to assign to the Service Account the permission **Artifact Registry Administrator**
+
+We also set the permission **** to push Docker image to the Artificat Registry rerpo
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/19011a91-59df-4fa0-b0c6-ee093e1c690d)
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/83aacfc9-7078-458c-ac82-f4cff7cdaddb)
+
+
+
 Below is the complete main.yml file based on your initial workflow, with the added functionality to check for the existence of a Google Cloud Artifact Registry repository and create it if it does not exist. 
 
 This workflow includes steps for authentication, checking and creating the repository, building and pushing the Docker image, and verifying the push.
