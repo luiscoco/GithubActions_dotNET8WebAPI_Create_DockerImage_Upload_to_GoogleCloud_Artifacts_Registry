@@ -124,4 +124,16 @@ jobs:
   
 Navigate to Google Cloud Artifacts Registry repo
 
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/9181218c-a84d-4a1f-b6fb-06e3150c7006)
+
+We can see inside the repo the uploaded Docker image
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/84a35720-a2d9-45a3-9926-916961d07514)
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/9b06084c-088e-4c2a-8ef5-f972cd4ea2b0)
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/8c0979b7-4fbd-495c-9d35-facbf330bfd3)
+
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/d3a98822-3e04-4c05-bdaf-056a0e346f0f)
+
 
