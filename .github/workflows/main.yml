@@ -26,15 +26,9 @@ jobs:
       with:
         credentials_json: ${{ secrets.GOOGLE_CLOUD_CREDENTIALS }}
 
-    - name: Configure Docker for Google Cloud Artifact Registry
+    - name: Docker login to Google Cloud Artifact Registry
       run: |
-        gcloud auth configure-docker ${{ env.REPOSITORY }},gcr.io
-
-    # New step to check access to the Artifact Registry
-    - name: Check access to Google Cloud Artifact Registry
-      run: |
-        gcloud artifacts repositories list --project=${{ env.PROJECT_ID }}
-        gcloud artifacts docker images list ${{ env.REPOSITORY }}
+        echo '${{ secrets.GOOGLE_CLOUD_CREDENTIALS }}' | docker login europe-southwest1-docker.pkg.dev -u _json_key --password-stdin
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
