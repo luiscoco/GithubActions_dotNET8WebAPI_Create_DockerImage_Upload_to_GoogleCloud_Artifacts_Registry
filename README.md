@@ -22,6 +22,8 @@ Grant Access: Assign the service account appropriate roles. For Docker images, r
 
 Be cautious with permissions to follow the principle of least privilege.
 
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/bace8465-8ce9-4f1e-9187-fa4beee45943)
+
 Create Key: After creating the service account, click on it to open its details. Under the "Keys" tab, click "Add Key", then select "Create new key". 
 
 Choose "JSON" as the key type and click "Create". This will download the JSON key file to your computer.
