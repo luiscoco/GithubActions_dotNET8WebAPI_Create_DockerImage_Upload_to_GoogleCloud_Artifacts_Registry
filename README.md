@@ -226,9 +226,11 @@ In our github repo we nagivate to the **Settings->Secrets option->Actions**
 
 ![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/41eeb34d-2964-4fff-ac6b-2d24269bc174)
 
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/93b12a91-7406-4bad-b40c-44d75634eed2)
 
+![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/9ce89b98-1ea7-4eed-8c28-5995870f686d)
 
-Below is the complete main.yml file based on your initial workflow, with the added functionality to check for the existence of a Google Cloud Artifact Registry repository and create it if it does not exist. 
+Below is the complete **main.yml** file based on your initial workflow, with the added functionality to check for the existence of a Google Cloud Artifact Registry repository and create it if it does not exist. 
 
 This workflow includes steps for authentication, checking and creating the repository, building and pushing the Docker image, and verifying the push.
 
