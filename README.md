@@ -200,7 +200,7 @@ We can verify the running Docker container
 
 As prerequisite for creating a new Artifact Registry repo it is mandatory to assign to the Service Account the permission **Artifact Registry Administrator**
 
-We also set the permission **** to push Docker image to the Artificat Registry rerpo
+We also set the permission **Artifact Registry Writer** to push Docker image to the Artificat Registry rerpo
 
 ![image](https://github.com/luiscoco/GithubActions_dotNET8WebAPI_Create_DockerImage_Upload_to_GoogleCloud_Artifacts_Registry/assets/32194879/19011a91-59df-4fa0-b0c6-ee093e1c690d)
 
